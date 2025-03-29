@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "author": "Kanad Gupta",
+  "engines": {
+    "node": "20.19.0"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {
+    "vitest": "^3.0.9"
+  }
+}
