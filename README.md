@@ -29,18 +29,17 @@ below are the steps to reproduce the issue. see [`package.json`](./package.json)
 
    ```
    ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯ Startup Error ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
-   Error: No projects were found. Make sure your configuration is correct. The workspace: [
-       "packages/*"
-   ].
-       at resolveWorkspace (file:///[redacted]/vitest-workspaces-issue/node_modules/vitest/dist/chunks/cli-api.Ckwz_xSb.js:12027:11)
-       at async Vitest._setServer (file:///[redacted]/vitest-workspaces-issue/node_modules/vitest/dist/chunks/cli-api.Ckwz_xSb.js:12532:22)
-       at async handler (file:///[redacted]/vitest-workspaces-issue/node_modules/vitest/dist/chunks/cli-api.Ckwz_xSb.js:13488:11)
-       at async _createServer (file:///[redacted]/vitest-workspaces-issue/node_modules/vite/dist/node/chunks/dep-DDxXL6bt.js:44191:20)
-       at async createViteServer (file:///[redacted]/vitest-workspaces-issue/node_modules/vitest/dist/chunks/cli-api.Ckwz_xSb.js:10305:18)
-       at async createVitest (file:///[redacted]/vitest-workspaces-issue/node_modules/vitest/dist/chunks/cli-api.Ckwz_xSb.js:13528:18)
-       at async prepareVitest (file:///[redacted]/vitest-workspaces-issue/node_modules/vitest/dist/chunks/cli-api.Ckwz_xSb.js:13947:15)
-       at async startVitest (file:///[redacted]/vitest-workspaces-issue/node_modules/vitest/dist/chunks/cli-api.Ckwz_xSb.js:13878:15)
-       at async start (file:///[redacted]/vitest-workspaces-issue/node_modules/vitest/dist/chunks/cac.CeVHgzve.js:1595:17)
+   Error: Inline workspace references a non-existing file or a directory: [redacted]/vitest-workspaces-issue/packages/a/packages/a
+       at resolveTestProjectConfigs (file://[redacted]/vitest-workspaces-issue/node_modules/vitest/dist/chunks/cli-api.Ckwz_xSb.js:12223:17)
+       at resolveWorkspace (file://[redacted]/vitest-workspaces-issue/node_modules/vitest/dist/chunks/cli-api.Ckwz_xSb.js:11964:71)
+       at Vitest.resolveWorkspace (file://[redacted]/vitest-workspaces-issue/node_modules/vitest/dist/chunks/cli-api.Ckwz_xSb.js:12618:14)
+       at Vitest._setServer (file://[redacted]/vitest-workspaces-issue/node_modules/vitest/dist/chunks/cli-api.Ckwz_xSb.js:12532:33)
+       at async handler (file://[redacted]/vitest-workspaces-issue/node_modules/vitest/dist/chunks/cli-api.Ckwz_xSb.js:13488:11)
+       at async _createServer (file://[redacted]/vitest-workspaces-issue/node_modules/vite/dist/node/chunks/dep-DDxXL6bt.js:44191:20)
+       at async createViteServer (file://[redacted]/vitest-workspaces-issue/node_modules/vitest/dist/chunks/cli-api.Ckwz_xSb.js:10305:18)
+       at async createVitest (file://[redacted]/vitest-workspaces-issue/node_modules/vitest/dist/chunks/cli-api.Ckwz_xSb.js:13528:18)
+       at async prepareVitest (file://[redacted]/vitest-workspaces-issue/node_modules/vitest/dist/chunks/cli-api.Ckwz_xSb.js:13947:15)
+       at async startVitest (file://[redacted]/vitest-workspaces-issue/node_modules/vitest/dist/chunks/cli-api.Ckwz_xSb.js:13878:15)
    ```
 
 ## workarounds
